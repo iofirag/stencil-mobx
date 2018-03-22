@@ -1,11 +1,17 @@
+const sass = require("@stencil/sass");
+
 exports.config = {
-  publicPath: '/build',
+  namespace: "stencilmobx",
+  // publicPath: '/build',
+  outputTargets: [
+    { type: 'www' },
+    { type: 'dist' }
+  ],
   bundles: [
     { components: ['my-app', 'my-header','my-routes','my-name', 'my-address'] }
   ],
-  collections: [
-    { name: '@stencil/router' }
-  ]
+
+  plugins: [sass()],
 };
 
 exports.devServer = {
