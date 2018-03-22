@@ -3,8 +3,53 @@
  * It contains typing information for all components that exist in this project
  * and imports for stencil collections that might be configured in your stencil.config.js file
  */
+declare global {
+  namespace JSX {
+    interface Element {}
+    export interface IntrinsicElements {}
+  }
+  namespace JSXElements {}
 
-import '@stencil/router';
+  interface HTMLStencilElement extends HTMLElement {
+    componentOnReady(): Promise<this>;
+    componentOnReady(done: (ele?: this) => void): void;
+
+    forceUpdate(): void;
+  }
+
+  interface HTMLAttributes {}
+}
+
+
+import {
+  App as MyApp
+} from './components/app/app';
+
+declare global {
+  interface HTMLMyAppElement extends MyApp, HTMLStencilElement {
+  }
+  var HTMLMyAppElement: {
+    prototype: HTMLMyAppElement;
+    new (): HTMLMyAppElement;
+  };
+  interface HTMLElementTagNameMap {
+    "my-app": HTMLMyAppElement;
+  }
+  interface ElementTagNameMap {
+    "my-app": HTMLMyAppElement;
+  }
+  namespace JSX {
+    interface IntrinsicElements {
+      "my-app": JSXElements.MyAppAttributes;
+    }
+  }
+  namespace JSXElements {
+    export interface MyAppAttributes extends HTMLAttributes {
+      
+      
+    }
+  }
+}
 
 
 import {
@@ -12,7 +57,7 @@ import {
 } from './components/my-address/my-address';
 
 declare global {
-  interface HTMLMyAddressElement extends MyAddress, HTMLElement {
+  interface HTMLMyAddressElement extends MyAddress, HTMLStencilElement {
   }
   var HTMLMyAddressElement: {
     prototype: HTMLMyAddressElement;
@@ -34,6 +79,7 @@ declare global {
       city?: string;
       state?: string;
       street?: string;
+      
     }
   }
 }
@@ -44,7 +90,7 @@ import {
 } from './components/my-header';
 
 declare global {
-  interface HTMLMyHeaderElement extends MyHeader, HTMLElement {
+  interface HTMLMyHeaderElement extends MyHeader, HTMLStencilElement {
   }
   var HTMLMyHeaderElement: {
     prototype: HTMLMyHeaderElement;
@@ -64,6 +110,7 @@ declare global {
   namespace JSXElements {
     export interface MyHeaderAttributes extends HTMLAttributes {
       
+      
     }
   }
 }
@@ -74,7 +121,7 @@ import {
 } from './components/my-name/my-name';
 
 declare global {
-  interface HTMLMyNameElement extends MyName, HTMLElement {
+  interface HTMLMyNameElement extends MyName, HTMLStencilElement {
   }
   var HTMLMyNameElement: {
     prototype: HTMLMyNameElement;
@@ -95,6 +142,7 @@ declare global {
     export interface MyNameAttributes extends HTMLAttributes {
       first?: string;
       last?: string;
+      
     }
   }
 }
@@ -105,7 +153,7 @@ import {
 } from './components/my-routes';
 
 declare global {
-  interface HTMLMyRoutesElement extends MyRoutes, HTMLElement {
+  interface HTMLMyRoutesElement extends MyRoutes, HTMLStencilElement {
   }
   var HTMLMyRoutesElement: {
     prototype: HTMLMyRoutesElement;
@@ -125,7 +173,9 @@ declare global {
   namespace JSXElements {
     export interface MyRoutesAttributes extends HTMLAttributes {
       
+      
     }
   }
 }
 
+declare global { namespace JSX { interface StencilJSX {} } }
