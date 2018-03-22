@@ -33,14 +33,14 @@ declare global {
     new (): HTMLMyAppElement;
   };
   interface HTMLElementTagNameMap {
-    "my-app": HTMLMyAppElement;
+    'my-app': HTMLMyAppElement;
   }
   interface ElementTagNameMap {
-    "my-app": HTMLMyAppElement;
+    'my-app': HTMLMyAppElement;
   }
   namespace JSX {
     interface IntrinsicElements {
-      "my-app": JSXElements.MyAppAttributes;
+      'my-app': JSXElements.MyAppAttributes;
     }
   }
   namespace JSXElements {
@@ -64,21 +64,21 @@ declare global {
     new (): HTMLMyAddressElement;
   };
   interface HTMLElementTagNameMap {
-    "my-address": HTMLMyAddressElement;
+    'my-address': HTMLMyAddressElement;
   }
   interface ElementTagNameMap {
-    "my-address": HTMLMyAddressElement;
+    'my-address': HTMLMyAddressElement;
   }
   namespace JSX {
     interface IntrinsicElements {
-      "my-address": JSXElements.MyAddressAttributes;
+      'my-address': JSXElements.MyAddressAttributes;
     }
   }
   namespace JSXElements {
     export interface MyAddressAttributes extends HTMLAttributes {
-      city?: string;
-      state?: string;
-      street?: string;
+      'city'?: string;
+      'state'?: string;
+      'street'?: string;
       
     }
   }
@@ -97,14 +97,14 @@ declare global {
     new (): HTMLMyHeaderElement;
   };
   interface HTMLElementTagNameMap {
-    "my-header": HTMLMyHeaderElement;
+    'my-header': HTMLMyHeaderElement;
   }
   interface ElementTagNameMap {
-    "my-header": HTMLMyHeaderElement;
+    'my-header': HTMLMyHeaderElement;
   }
   namespace JSX {
     interface IntrinsicElements {
-      "my-header": JSXElements.MyHeaderAttributes;
+      'my-header': JSXElements.MyHeaderAttributes;
     }
   }
   namespace JSXElements {
@@ -128,20 +128,20 @@ declare global {
     new (): HTMLMyNameElement;
   };
   interface HTMLElementTagNameMap {
-    "my-name": HTMLMyNameElement;
+    'my-name': HTMLMyNameElement;
   }
   interface ElementTagNameMap {
-    "my-name": HTMLMyNameElement;
+    'my-name': HTMLMyNameElement;
   }
   namespace JSX {
     interface IntrinsicElements {
-      "my-name": JSXElements.MyNameAttributes;
+      'my-name': JSXElements.MyNameAttributes;
     }
   }
   namespace JSXElements {
     export interface MyNameAttributes extends HTMLAttributes {
-      first?: string;
-      last?: string;
+      'first'?: string;
+      'last'?: string;
       
     }
   }
@@ -160,14 +160,14 @@ declare global {
     new (): HTMLMyRoutesElement;
   };
   interface HTMLElementTagNameMap {
-    "my-routes": HTMLMyRoutesElement;
+    'my-routes': HTMLMyRoutesElement;
   }
   interface ElementTagNameMap {
-    "my-routes": HTMLMyRoutesElement;
+    'my-routes': HTMLMyRoutesElement;
   }
   namespace JSX {
     interface IntrinsicElements {
-      "my-routes": JSXElements.MyRoutesAttributes;
+      'my-routes': JSXElements.MyRoutesAttributes;
     }
   }
   namespace JSXElements {

@@ -13,16 +13,20 @@ export class HeaderComponent {
         autorun(() => {
             this.unfinishedTodoCountState = store.unfinishedTodoCount;
         })
-    }
+    // }
     
     render() {
         console.log('my-header ', this.unfinishedTodoCountState)
         return (
-            [
-                <h3>Router & Props Test w/Stencil </h3>,
-                <stencil-route-link url="/">Show Name</stencil-route-link>,
-                <stencil-route-link url="/address">Show Address</stencil-route-link>
-            ]
-        )
+            [<h3>Router & Props Test w/Stencil </h3>,
+            <stencil-route-link
+                url="/" >
+                Show Name
+            </stencil-route-link>,
+            <stencil-route-link
+                url="/address" >
+                Show Address
+            </stencil-route-link>
+            ])
     }
 }

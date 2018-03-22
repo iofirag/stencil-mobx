@@ -111,7 +111,7 @@ class Todo {
 
 
 let store: TodoList;
-const getStore = (): TodoList=> {
+const getStore = ()=> {
   if (!store) {
     store = new TodoList()
   }

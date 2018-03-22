@@ -110,8 +110,8 @@ class Todo {
 
 
 
-let store: TodoList;
-const getStore = (): TodoList=> {
+let store;
+const getStore = ()=> {
   if (!store) {
     store = new TodoList()
   }
