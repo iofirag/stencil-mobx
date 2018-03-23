@@ -9,7 +9,7 @@ class TodoList {
     this.todos = this.todos.slice().filter(p => p.id !== _todo.id);
   }
   @action add(_title: string) {
-    this.todos.push(new Todo(_title))
+    this.todos.push(new Todo(_value))
   }
   @computed get unfinishedTodoCount() {
     return this.todos.slice().filter((_todo: Todo) => !_todo.finished).length

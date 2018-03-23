@@ -11,7 +11,7 @@ import store from '../store'
 })
 export class App {
 
-    @observable @State() todos: any[]
+    @observable @State() todos: any
     @observable @State() title: string
 
     constructor() {

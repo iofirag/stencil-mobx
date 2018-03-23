@@ -8,8 +8,8 @@ class TodoList {
   @action removeTodo(_todo: Todo) {
     this.todos = this.todos.slice().filter(p => p.id !== _todo.id);
   }
-  @action add(_title: string) {
-    this.todos.push(new Todo(_title))
+  @action add(_value: Todo) {
+    this.todos.push(new Todo(_value))
   }
   @computed get unfinishedTodoCount() {
     return this.todos.slice().filter((_todo: Todo) => !_todo.finished).length
@@ -30,7 +30,7 @@ class Todo {
     this.completedOn = this.finished ? new Date().getTime() : undefined
   }
 
-  constructor(_title: string) {
+  constructor(_title: ) {
     this.title = _title;
     this.finished = false;
   }
